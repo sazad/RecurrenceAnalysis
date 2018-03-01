@@ -1,12 +1,16 @@
 % Sonia Azad
 % February 27, 2018
 
-% This M-File is performs the first step of Recurrence Quantification 
-% Analysis of NonLinear Dynamical Systems. 
-% The function vectorize embeds a linear vector of sequential 
-% scalar measurements (data_raw) into a higher dimensional space 
-% by the method of time delay according to given
-% integer dim > 0 and integer delay > 0. 
+% This M-file embeds a linear vector of sequential
+% scalar measurements into a higher dimensional space 
+% by the method of time delay.
+% 
+% parameters:
+%     data_raw: n x 1 size column vector of data 
+%     dim: positive integer
+%     delay: positive integer
+% returns:
+%     data: m x dim size matrix
 function data = vectorize(data_raw, dim, delay)
 
 len = length(data_raw);
